@@ -5,11 +5,10 @@ email: 896235418@qq.com
 description: "黄金非宝书为宝. 万事皆空善不空。@博客主页、个人网站, 知乎／阿里／Front-End／UX Unicorn／Web &amp; Mobile Lover／Motion Design "
 baseurl: ""
 url: "http://zfx5130.github.io"
-twitter_username: zfx5130
 github_username:  zfx5130
-facebook_username:  zfx5130
 weibo_username: zfx5130
 zhihu_username: zfx5130
+csdn_username: zfx5130
 
 # Build settings
 markdown: kramdown 
