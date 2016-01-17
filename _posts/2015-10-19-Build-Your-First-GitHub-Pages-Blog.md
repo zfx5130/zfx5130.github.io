@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: 打造你的 GitHub Pages 专属博客（小白教程）  
+title: 打造你的 GitHub Pages 专属博客
 categories: [blog ]  
 tags: [Tech, ]  
 description: 「快速打造一个可心的独立博客~！」   
