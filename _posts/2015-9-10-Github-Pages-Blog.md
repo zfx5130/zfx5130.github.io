@@ -11,10 +11,7 @@ GitHub Pages 是 GitHub 所提供的一个博客系统。现在使用这一服�
 让我们忽略 GitHub 被国内网友戏称为「世界上最大的同性（程序猿们）社交网站...」这样的事……
 
 ## 本文初衷
-
-关于 GitHub 博客的具体搭建，下次会专门写一篇博文。这次就先略过，只说使用。
-
-说到这里，本文的前提也大致明确：这是一份 GitHub 博客使用说明。仅针对已 fork 并配置完模板（以 Jekyll 精确说是以 [HMFAYSAL Omega THeme](http://www.hossainmohdfaysal.com/hmfaysal-omega-theme/) 这个博客模板为准），已是可用状态的博客。接下来，基本只需将现成的博客项目下载到本地，稍作修改即可开始写作及发布内容。
+本文的前提也大致明确：这是一份 GitHub 博客使用说明。仅针对已 fork 并配置完模板（以 Jekyll 精确说是以 [HMFAYSAL Omega THeme](http://www.hossainmohdfaysal.com/hmfaysal-omega-theme/) 这个博客模板为准），已是可用状态的博客。接下来，基本只需将现成的博客项目下载到本地，稍作修改即可开始写作及发布内容。
 
 好吧，这篇文章，是专门写给小鲤鱼的博客使用手册。
 
