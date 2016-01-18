@@ -10,28 +10,6 @@ weibo_username: zfx5130
 zhihu_username: zfx5130
 csdn_username: zfx5130
 
-# Build settings
-markdown: kramdown 
-
-# markdown: redcarpet
-# redcarpet can auto highlight code, but the lack of header-id make the catalog impossible 
-
-# use Github Flavored Markdown !important
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-
-kramdown:
-  input: GFM
- highlighter: pygments
-
-gems: [jekyll-paginate]
-permalink: none
-paginate: 8
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Shanghai
-
-# Title
 
 # Defaults for posts
 defaults:
