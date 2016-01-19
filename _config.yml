@@ -10,18 +10,16 @@ weibo_username: zfx5130
 zhihu_username: zfx5130
 csdn_username: zfx5130
 
-
 # Defaults for posts
-#defaults:
- # -
-  #  scope: 
-   #   path: ""
-    #  type: "posts"
-    #values:
-     # layout: "post"
-     # author: zfx510
-     # header-img: "img/post-bg-kuaidi.jpg" # We don't want posts without a header image, that whould mean white on white
-
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: zfx510
+      header-img: "img/home-bg-o.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
 comments :
