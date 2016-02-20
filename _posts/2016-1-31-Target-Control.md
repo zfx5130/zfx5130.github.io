@@ -25,4 +25,6 @@ description: 如何在项目中添加多个targets进行版本控制
 ####以下是自己方法实现添加多个Target的步骤:
  
 1.首先,先看下添加完成后的效果图,如下:
-![](https://github.com/zfx5130/zfx5130.github.io/tree/master/img/targets_post/target_test_1.png)
+
+![](/img/targets_post/target_test_1.png
+)
