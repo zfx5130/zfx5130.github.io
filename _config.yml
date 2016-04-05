@@ -17,7 +17,7 @@ markdown: kramdown
 # markdown: redcarpet
 # redcarpet can auto highlight code, but the lack of header-id make the catalog impossible 
 
-highlighter: pygments
+rouge: pygments
 permalink: pretty
 paginate: 20
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
