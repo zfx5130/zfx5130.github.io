@@ -127,10 +127,20 @@ func <#name#>(<#parameters#>) -> <#return type#> {
  
  函数实际上是一种特殊的闭包：它是一段能之后被调取的代码。你可以使用`{}`来创建一个匿名闭包。使用`in` 将参数和返回值类型声明与闭包函数体进行分离。
  
- ####函数闭包示例
+####函数闭包示例
  
  	 numbers.map { (number: Int) -> Int in
             let result = 3 * number
             return result
 	}
-ps：有很多种创建更简洁的闭包的方法。如果
+ps：有很多种创建更简洁的闭包的方法。如果一个闭包的类型已知，比如做为一个回调函数，你可以忽略参数和返回值。单个语句闭包会把它语句的值当做结果返回,示例如下：
+   
+  	 let numbersValue = numbers.map({ number in 3 * number })
+     print(numbersValue)
+ 
+ps： 你可以通过参数位置而不是参数名字来引用参数--这个方法在非常短的闭包中非常有用。当一个闭包做为最后一个参数传入一个函数的时候，它可以直接跟在括号的后面。当一个闭包是传给函数的唯一参数，可以完全忽略括号。示例如下：
+
+	  let sortedNumbers = numbers.sort{$0 > $1 }
+      print(sortedNumbers)
+  
+ 
