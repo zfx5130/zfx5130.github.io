@@ -7,7 +7,8 @@ tags: [Swift，函数式，闭包]
 description: Swift Functions(函数式) & Closures（闭包）
 ---
 
-####函数定义
+### 函数定义
+
    使用 `func` 来声明一个函数，使用名字和参数来调用函数。使用 `->` 来指定函数返回值的类型,在Xcode输入func,按下回车后，系统生成如下代码:
  
 ```
@@ -21,7 +22,7 @@ func <#name#>(<#parameters#>) -> <#return type#> {
  *  `return type` : 函数返回值类型（Swift中返回值类型可以返回多个值，也可以无返回值Void）
  *  `function body` : 函数体
  
-####代码示例
+### 代码示例
 
     func test() {
         print("无参数无返回值")
@@ -88,7 +89,7 @@ func <#name#>(<#parameters#>) -> <#return type#> {
     }
  
  
-####函数做为另一个函数的返回值使用
+###函数做为另一个函数的返回值使用
   函数是第一等类型，这意味着函数可以做为另一个函数的返回值。
   
       
@@ -105,7 +106,7 @@ func <#name#>(<#parameters#>) -> <#return type#> {
         print(incrementByTen)
 
 
-#### 函数做为参数使用
+### 函数做为参数使用
 	func hasAnyMatches(list: [Int], condition: Int -> Bool) -> Bool {
         for item in list {
             if condition(item) {
@@ -127,7 +128,7 @@ func <#name#>(<#parameters#>) -> <#return type#> {
  
  函数实际上是一种特殊的闭包：它是一段能之后被调取的代码。你可以使用`{}`来创建一个匿名闭包。使用`in` 将参数和返回值类型声明与闭包函数体进行分离。
  
-####函数闭包示例
+### 函数闭包示例
  
  	 numbers.map { (number: Int) -> Int in
             let result = 3 * number
