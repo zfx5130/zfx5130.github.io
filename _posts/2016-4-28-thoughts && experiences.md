@@ -2,7 +2,6 @@
 layout: post
 title: SwiftCon China2016大会看法总结及下一步规划
 categories: [blog]
-header-img: "img/post-bg-e2e-ux.jpg"
 tags: [感悟，总结]
 description: SwiftCon China2016 大会总结及规划
 ---
