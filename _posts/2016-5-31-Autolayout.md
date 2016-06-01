@@ -6,11 +6,11 @@ tags: [约束冲突]
 description: autolayout布局及约束冲突问题
 ---
 
-####使用Autolayout布局1 -- ConstraintWithItem
+#### 使用Autolayout布局1 -- ConstraintWithItem
 
    对于autolayout布局，我想大家都已经很熟悉了。到现在为止，越来越多的第三方约束框架，例如Masonry等，更方面的使得纯代码布局更加的方便。但是在某些情况下使用第三方并不是非常方面，那么就不得不用系统原生的方式来添加约束。那么接下来我主要是针对系统原生autolayout布局约束方式来加以说明，目前我了解到的添加约束方式有一下三种:
    
-######NSLayoutConstraint方式添加约束
+###### NSLayoutConstraint方式添加约束
 
     NSLayoutConstraint *centerXConstraint = [NSLayoutConstraint 
         constraintWithItem: _button                   //firstItem
@@ -44,25 +44,27 @@ description: autolayout布局及约束冲突问题
 
 ps：这种添加约束的方式我想大家都已经很熟悉，这里不多说，具体了解可参考以下：
 
-   1.[iOS开发动画篇之layout动画深入](http://allluckly.cn/%E6%8A%95%E7%A8%BF/tuogao34?from=timeline&isappinstalled=1)
+   - [iOS开发动画篇之layout动画深入](http://allluckly.cn/%E6%8A%95%E7%A8%BF/tuogao34?from=timeline&isappinstalled=1)
    
-   2.[Autolayout约束动画化](http://www.cocoachina.com/ios/20160331/15841.html)
+   - [Autolayout约束动画化](http://www.cocoachina.com/ios/20160331/15841.html)
 
 #### 使用AutoLayout约束布局2 -- VFL(Visual format language)
-			+ (NSArray *)constraintsWithVisualFormat:(NSString *)format options:(NSLayoutFormatOptions)opts metrics:(NSDictionary *)metrics views:(NSDictionary *)views; 
-			- (void)addConstraints:(NSArray *)constraints; //UIView
-			
-#######参数介绍:
+```
++ (NSArray *)constraintsWithVisualFormat:(NSString *)format options:(NSLayoutFormatOptions)opts metrics:(NSDictionary *)metrics views:(NSDictionary *)views; 
+- (void)addConstraints:(NSArray *)constraints; //UIView
 
-- `format`:此参数为你的VFL语句，比如:@"H:|-[button]-|"
+```			
+###### 参数介绍:
+
+- `format`:此参数为你的VFL语句，比如:`@"H:|-[button]-|"`
 
 - `opts`:枚举参数，默认写0，具体跟据你所实现的需求去选择你想要的枚举
 
-- `metrics`:这里是一个字典，当在format中使用了动态数据比如上现这句:@"H:|-[button(==width)]-|",表示这个button的宽度为width,那么这个参数去哪里找呢？就是在这个字典里面找到key对就的值，如果没有找到这个值，app就会crash.
+- `metrics`:这里是一个字典，当在format中使用了动态数据比如上现这句:`@"H:|-[button(==width)]-|"`,表示这个button的宽度为width,那么这个参数去哪里找呢？就是在这个字典里面找到key对就的值，如果没有找到这个值，app就会crash.
 
 - `views`:顾名思义，这是传所有你在vfl中使用到的view，那在上面这句例子中的应该怎么传呢？结果是这样的：NSDictionaryOfVariableBindings(button).如果你使用到了多个view，就可以这样NSDictionaryOfVariableBindings(button,button1,button3...),这个名字也要跟参数format中的一一对应，缺一不可.	
 
-######使用规则
+###### 使用规则
 ```
 |: 表示父视图
 -:表示距离
@@ -86,7 +88,7 @@ ps: >=、<=、== 限制最大为1000
 10:  [wideView(>=60@700)]  :视图的宽度为至少为60 不能超过  700 ，最大为1000
 ```
 
-######简单使用
+###### 简单使用
 
 ```
 @interface ViewController ()
@@ -102,27 +104,19 @@ ps: >=、<=、== 限制最大为1000
     button.translatesAutoresizingMaskIntoConstraints=NO;
     [button setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:button];
-    NSArray *constraints1=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[button]-|"
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　options:0
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　metrics:nil
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　views:NSDictionaryOfVariableBindings(button)];
-      
-    NSArray *constraints2=[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[button(==30)]"
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　options:0
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　metrics:nil
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　views:NSDictionaryOfVariableBindings(button)];
-      
+    NSArray *constraints1 = 
+    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[button]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)];  
+    NSArray *constraints2= 
+    [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[button(==30)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)];
     [self.view addConstraints:constraints1];
     [self.view addConstraints:constraints2];
-     
-      
 }
   
 @end
 
 ```
 
-####Autolayout约束布局方式3 -- NSLayoutAnchor(iOS9.0)
+#### Autolayout约束布局方式3 -- NSLayoutAnchor(iOS9.0)
 
   iOS9中另一个新增的API是NSLayoutAnchor。它的出现不仅仅是让使用代码添加约束变得简洁明了。通过该类强大的静态检查能力，还提供了额外的约束正确定保证。例子如下：
   
