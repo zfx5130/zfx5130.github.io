@@ -16,3 +16,6 @@ description: 集成并使用IJKPlayer视频直播框架
 如何觉得`github`上讲的不详细，实现起来相对较难，可以看如下链接：
 [iOS中集成ijkplayer视频直播框架](http://www.jianshu.com/p/1f06b27b3ac0) 个人觉得相对比较详细，已亲测，并成功集成到项目中。
 
+ps:集成此框架最主要的就是如何把ijkplayer打包成.framework框架。
+
+#####如何使用IJKPlayer
