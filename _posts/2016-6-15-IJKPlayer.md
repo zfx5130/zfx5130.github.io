@@ -18,4 +18,5 @@ description: 集成并使用IJKPlayer视频直播框架
 
 ps:集成此框架最主要的就是如何把ijkplayer打包成.framework框架。
 
-#####如何使用IJKPlayer
+##### 如何使用IJKPlayer
+
