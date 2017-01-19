@@ -27,10 +27,11 @@ ps:集成此框架最主要的就是如何把ijkplayer打包成.framework框架�
     
  第二种方式： ijkplayer 打包成framework导入工程中使用，这打包成framework过程此[文章](http://www.jianshu.com/p/1f06b27b3ac0)里面有详细说明，其中合并包操作需要注意路径是否填写正确，不然就会报错：
   	
-  	lipo -create "真机版本路径" "模拟器版本路径" -output "合并后的文件路径"
   	
-  	操作如下：（路径替换成自己项目里面包的路径）
-    lipo -create /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/Release-iphoneos/IJKMediaFramework.framework/IJKMediaFramework /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/Release-iphonesimulator/IJKMediaFramework.framework/IJKMediaFramework -output /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/IJKMediaFramework
+  	 lipo -create "真机版本路径" "模拟器版本路径" -output "合并后的文件路径"
+  	
+  	 操作如下：（路径替换成自己项目里面包的路径）
+     lipo -create /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/Release-iphoneos/IJKMediaFramework.framework/IJKMediaFramework /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/Release-iphonesimulator/IJKMediaFramework.framework/IJKMediaFramework -output /Users/admin/Library/Developer/Xcode/DerivedData/IJKMediaPlayer-cakhkkabtvnmptbgwbuzbnuhbgoa/Build/Products/IJKMediaFramework
 
 
 ##### 如何使用IJKPlayer
