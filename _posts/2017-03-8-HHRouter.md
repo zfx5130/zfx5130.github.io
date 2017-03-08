@@ -33,16 +33,29 @@ description:  HHRouter
   
   - 使用方式1: AController -> BController 不传参数
   
-         //UserAViewController.h 点击按钮跳转代码：push到BViewController
+         //UserAViewController.m 点击按钮跳转代码：push到BViewController
          UIViewController *userBController = [[HHRouter shared] matchController:kHHRouterUserBViewControllerName];
          [self.navigationController pushViewController:userBController
                                          animated:YES];
                                          
-         //APPDelegate.h文件代码如下
+         //APPDelegate.m文件代码如下
          [[HHRouter shared] map:kHHRouterUserBViewControllerName
          toControllerClass:NSClassFromString(kHHRouterUserBViewControllerName)];                            
   
 
 
  -  使用方式2：AController -> BController 穿参数userId
- 
+  
+         //UserAViewController.m 点击按钮跳转代码：push到CViewController，userId值为1
+         UIViewController *userCController = [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan",kHHRouterUserCViewControllerName]];
+   	    [self.navigationController pushViewController:userCController
+                                             animated:YES];
+        
+         //APPDelegate.m文件代码如下        
+		 [[HHRouter shared] map:[NSString stringWithFormat:@"/		 %@/:userId/:name/",kHHRouterUserCViewControllerName]
+          toControllerClass:NSClassFromString(kHHRouterUserCViewControllerName)];
+         
+         //UserCViewController.m 打印参数值 1 zhangsan
+          NSLog(@"userId::::::::::%@",self.params[@"userId"]);
+          NSLog(@"userId::::::::::%@",self.params[@"name"]);
+         
