@@ -6,12 +6,12 @@ tags: [HHRouter]
 description:  HHRouter
 ---
 
-##### HHRouter 
+#### HHRouter 
 
   GitHub地址：[https://github.com/lightory/HHRouter](https://github.com/lightory/HHRouter) <br/>
   Function &：Yet another URL Router for iOS. Clean, Fast & Flexible. 
    
-##### 优势
+#### 优势
 
    - 减少`ViewController`之间的耦合。 <br/>
    
@@ -20,3 +20,29 @@ description:  HHRouter
  
    - 使用`URL Router`每个ViewController都拥有唯一且不重复的URL，对界面跳转、追踪用户浏览记录、开放`URL Scheme`都很有帮助。
 
+#### 使用
+
+###### 1.安装方式`Cocoapods`
+ 
+	pod 'HHRouter', '~> 0.1.8'
+ 	
+ 	导入头文件：
+ 	#import <HHRouter/HHRouter.h>    
+    
+###### 2.使用方式
+  
+  - 使用方式1: AController -> BController 不传参数
+  
+         //UserAViewController.h 点击按钮跳转代码：push到BViewController
+         UIViewController *userBController = [[HHRouter shared] matchController:kHHRouterUserBViewControllerName];
+         [self.navigationController pushViewController:userBController
+                                         animated:YES];
+                                         
+         //APPDelegate.h文件代码如下
+         [[HHRouter shared] map:kHHRouterUserBViewControllerName
+         toControllerClass:NSClassFromString(kHHRouterUserBViewControllerName)];                            
+  
+
+
+ -  使用方式2：AController -> BController 穿参数userId
+ 
