@@ -8,13 +8,12 @@ description:  HHRouter
 
 ##### HHRouter 
 
-  GitHub地址：https://github.com/lightory/HHRouter
-  
+  GitHub地址：[https://github.com/lightory/HHRouter](https://github.com/lightory/HHRouter) <br/>
   Function &：Yet another URL Router for iOS. Clean, Fast & Flexible. 
    
 ##### 优势
 
-   - 减少`ViewController`之间的耦合。
+   - 减少`ViewController`之间的耦合。 <br/>
    
      1.使得控制器之间的跳转，不需要依赖于后者。  
      2.对用后者控制器的属性变化，我们只需要修改后者控制器即可，后者需要的各项属性可以通过`URL Router`的参数完成传递。
