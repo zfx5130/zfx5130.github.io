@@ -44,7 +44,7 @@ description:  HHRouter
   
 
 
- -  使用方式2：AController -> BController 穿参数userId
+ -  使用方式2：AController -> BController 穿参数userId,name
   
          //UserAViewController.m 点击按钮跳转代码：push到CViewController，userId值为1
          UIViewController *userCController = [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan",kHHRouterUserCViewControllerName]];
