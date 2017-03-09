@@ -59,10 +59,10 @@ description:  HHRouter
           NSLog(@"userId::::::::::%@",self.params[@"userId"]);
           NSLog(@"userId::::::::::%@",self.params[@"name"]);
          
- - 使用方式3：URL 查询参数 
+ - 使用方式3：URL 查询参数
  
- 		  UIViewController *userCController = 
-  	      [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan/?tabIndex=3",kHHRouterUserCViewControllerName]];
+  		  UIViewController *userCController = [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan/?tabIndex=3", kHHRouterUserCViewControllerNae]]; 
+  		   	  
           [self.navigationController pushViewController:userCController animated:YES];
           NSLog(@"::::::%@",userCController.params[@"tabIndex"]);
  
