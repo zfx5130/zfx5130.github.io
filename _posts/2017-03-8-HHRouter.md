@@ -61,24 +61,20 @@ description:  HHRouter
          
  - 使用方式3：URL 查询参数
  
- 		   UIViewController *userCController = [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan/?tabIndex=3",kHHRouterUserCViewControllerName]];
-    	   [self.navigationController pushViewController:userCController animated:YES];
-           NSLog(@"::::::%@",userCController.params[@"tabIndex"]);
+ 		 UIViewController *userCController = [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan/?tabIndex=3",kHHRouterUserCViewControllerName]];
+    	 [self.navigationController pushViewController:userCController animated:YES];
+         NSLog(@"::::::%@",userCController.params[@"tabIndex"]);
  
  
  - 使用方式4： Block 调用
- 		
- 		- (void)testRouteBlocks
-         {
-         dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+ 	
+       [[HHRouter shared] map:@"/user/add/"
+                  toBlock:^id(NSDictionary* params) {
+					return @"test";
+        }];
 
-         [[HHRouter shared] map:@"/user/add/"
-                   toBlock:^id(NSDictionary* params) {
-						return @"test";
-                   }];
-
-        HHRouterBlock block = [[HHRouter shared] matchBlock:@"/user/add/?a=1&b=2"];
-		NSLog(@"block::::%@",block(@"text" : @"test"));
+       HHRouterBlock block = [[HHRouter shared] matchBlock:@"/user/add/?a=1&b=2"];
+	   NSLog(@"block::::%@",block(@"text" : @"test"));
        [[HHRouter shared] callBlock:@"/user/add/?a=1&b=2"];
         }
  	
