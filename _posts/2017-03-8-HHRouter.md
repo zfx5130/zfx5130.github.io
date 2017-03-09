@@ -60,12 +60,7 @@ description:  HHRouter
           NSLog(@"userId::::::::::%@",self.params[@"name"]);
          
  - 使用方式3：URL 查询参数 <br/>
- 
-  	      UIViewController *userCController = 
-  	      [[HHRouter shared] matchController:[NSString stringWithFormat:@"/%@/1/zhangsan/?tabIndex=3",kHHRouterUserCViewControllerName]];
-          [self.navigationController pushViewController:userCController animated:YES];
-          NSLog(@"::::::%@",userCController.params[@"tabIndex"]);
- 
+
  - 使用方式4： Block 调用
  	
        [[HHRouter shared] map:@"/user/add/"
