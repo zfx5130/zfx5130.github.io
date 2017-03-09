@@ -52,7 +52,7 @@ description:  HHRouter
                                              animated:YES];
         
          //APPDelegate.m文件代码如下        
-		 [[HHRouter shared] map:[NSString stringWithFormat:@"/		 %@/:userId/:name/",kHHRouterUserCViewControllerName]
+		 [[HHRouter shared] map:[NSString stringWithFormat:@"/%@/:userId/:name/",kHHRouterUserCViewControllerName]
           toControllerClass:NSClassFromString(kHHRouterUserCViewControllerName)];
          
          //UserCViewController.m 打印参数值 1 zhangsan
