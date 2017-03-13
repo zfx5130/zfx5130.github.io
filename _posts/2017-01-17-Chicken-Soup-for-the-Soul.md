@@ -3,6 +3,7 @@ layout: post
 title: 所谓的心灵鸡汤
 categories: [blog ]
 tags: [鸡汤]
+header-img: "img/post-bg-miui6.jpg"
 description:  所谓的心灵鸡汤
 ---
 

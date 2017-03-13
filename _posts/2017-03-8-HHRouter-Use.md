@@ -3,6 +3,8 @@ layout: post
 title: HHRouter使用
 categories: [blog]
 tags: [HHRouter]
+header-img: "img/post-bg-rwd.jpg"
+
 description:  HHRouter使用
 ---
 

@@ -3,6 +3,8 @@ layout: post
 title: 2016年度个人总结
 categories: [blog ]
 tags: [总结,]
+header-img: "img/post-bg-2015.jpg"
+
 description:  年度个人总结
 ---
  

@@ -3,6 +3,8 @@ layout: post
 title: Swift闭包使用
 categories: [blog]
 tags: [Swift,Closures]
+header-img: "img/post-bg-alitrip.jpg"
+
 description: Swift闭包使用
 ---
 
