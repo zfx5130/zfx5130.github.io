@@ -3,6 +3,7 @@ layout: post
 title: GitHub 博客简明使用指南
 categories: [blog ]
 tags: [GitHub,]
+header-img: "img/home-bg.jpg"
 description:  GitHub 博客使用概述
 ---
 
