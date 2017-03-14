@@ -52,5 +52,5 @@ description:  多个可变cell复杂界面的优化
   
 
 ##### ps
- [Demo下载地址](https://github.com/kelystor/MultipleVariantCell)
+ [Demo下载地址](https://github.com/zfx5130/MulitipleVariantCellDemo)
  
