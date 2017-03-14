@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 多个可变cell复杂界面的优化方案
+title: 多个可变cell复杂界面的优化
 categories: [blog]
 tags: [cell]
 header-img: "img/post-bg-kuaidi.jpg"
-description:  多个可变cell复杂界面的优化方案
+description:  多个可变cell复杂界面的优化
 ---  
 
 ##### 示例图如下
