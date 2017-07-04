@@ -22,6 +22,56 @@ description: runtime
 
 ps: `OC`是运行时机制，其中最只要的是消息机制。在编辑时并不能决定真正调用那个函数，只是在真正运行的时候才会根据函数的名称找到对应的函数来调用。在编译阶段，`OC`可以调用任何函数，及时函数并未实现，只要声明过就不会报错。
 
+##### Runtime作用
+
+- 发送消息
+- 交换方法
+- 动态添加方法
+- 分类添加属性
+- 字典转模型
+
+##### 给Category添加属性
+
+```
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    // 给系统NSObject类动态添加属性name
+
+    NSObject *objc = [[NSObject alloc] init];
+    objc.name = @"噢mygade";
+    NSLog(@"%@",objc.name);
+
+}
+@end
+
+// 定义关联的key
+static const char *key = "name";
+
+@implementation NSObject (Property)
+
+- (NSString *)name
+{
+    // 根据关联的key，获取关联的值。
+    return objc_getAssociatedObject(self, key);
+}
+
+- (void)setName:(NSString *)name
+{
+    // 第一个参数：给哪个对象添加关联
+    // 第二个参数：关联的key，通过这个key获取
+    // 第三个参数：关联的value
+    // 第四个参数:关联的策略
+    objc_setAssociatedObject(self, key, name, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+@end
+```
+
+
+
 ##### RunTime调用拦截 
 
 ```
